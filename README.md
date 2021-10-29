@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# SWE-432 HW-4 Starter Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Submission Information
 
-## Available Scripts
+### Student Information
 
-In the project directory, you can run:
+*Please fill in this information before submission*
 
-### `npm start`
+* **Student Name:** 
+* **Student G-Number:** 
+* **Heroku Deployment URL:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Documentation of your Web App and React Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*Here please describe your (at least) 5 different React components as well as the overall purpose of your web application. We provide an example below of what we expect this documentation to look like.*
 
-### `npm test`
+**General App Description:** This web application provides information about cities loaded from a centralized database at www.citiesinfo.org. This app can help people find reference information about various city attributes such as population, capitals, and other demographic information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **React Component 1:** Retrieve a city from our Washington DC Database
+  * *Functionality:* Displays a list of cities and allows the user to sort the cities alphabetically
+  * *Interactivity:* The user can click on an arrow at the top of the list to change the sorting.
 
-### `npm run build`
+## Project Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This repo contains a barebones React app with a single component. You will use this as the "base" version of your Interactive Front-end application for HW Assignment #4. You will simply create a copy of this repo through GitHub classroom and then work in that repo. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Homework Assignment 3 Detailed Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can find the deatiled instructions for HW Assignment #4 on the [course webpage](https://cs.gmu.edu/~kpmoran/teaching/swe-432-f21/hw4). Please read these carefully before getting started.
 
-### `npm run eject`
+## Running this Project Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Make sure you have [Node.js](http://nodejs.org/) and (optionally) the [Heroku CLI](https://cli.heroku.com/) installed. You only need the Heroku CLI installed if you plan to deploy the project from the CLI instead of the Heroku web interface. See the [HW Assignment #4 instructions](https://cs.gmu.edu/~kpmoran/teaching/swe-432-f21/hw4) for more details.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*Note the following commands assume a Unix-based enviornment. If you are on windows, you may need to use something such as Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/about).*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+$ git clone <repo-name>
+$ cd <repo-name>
+$ npm install
+$ npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+After executing these commands, your express backend and React frontend should now be running on [localhost:5000](http://localhost:5000/). You can visit this page in your web browser to view your front-end user interface. You can also access your microservice endpoints (e.g., [localhost:5000/cities](http://localhost:5000/cities). Please see the [HW #3 instructions](https://cs.gmu.edu/~kpmoran/teaching/swe-432-f21/hw3) for more information on how this works.
 
-## Learn More
+## Deploying to Heroku
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Check out [our instructions](https://cs.gmu.edu/~kpmoran/teaching/swe-432-f21/hw3) for deploying your application to Heroku. You can use the button below for quick access to your Heroku account.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-### Code Splitting
+## Testing with Continuous Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Note that you are not required to test your project with Jest for HW3, however, we have enabled this functionality in case you would like to use it. If you would like to remove the tests, you can remove the `.github` directory from the repo.**
 
-### Analyzing the Bundle Size
+Currently, this repo is set up to run the Jest tests in the `App.test.js` file upon each commit to the `main` branch of the repository. If any of the tests fail, the CI process will fail and this will be indicated with red "X" on the main page of your repo, and GitHub will likely also send you a notification email that your automated tests have failed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Currently, the tests are configured to run by getting deployed to a remote virtual server with an Ubuntu operating system, where the `npm install` and `npm test` commands are executed.
 
-### Making a Progressive Web App
+Note that we have included the [`jest-dom`](https://testing-library.com/docs/ecosystem-jest-dom/) library for your tests. This allows you to check DOM elements in your tests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can find the [GitHub Actions](https://github.com/features/actions) script for this CI job [here](.github/workflows/ci.yml) if you want to learn more.
 
-### Advanced Configuration
+## Additional Resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+For more information about using Node.js on Heroku, see these Heroku Dev Center articles:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+- [Express Documentation](https://expressjs.com/en/5x/api.html)
+- [Supertest Documentation](https://www.npmjs.com/package/supertest)
+- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
